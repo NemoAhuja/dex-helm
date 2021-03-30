@@ -12,7 +12,7 @@ spec:
   type: {{ .Values.service.type }}
   ports:
   - port: {{ .Values.service.port }}
-    targetPort: http
+    targetPort: 5556
     protocol: TCP
     name: http
 {{- if and  .Values.service.nodePort (eq "NodePort" .Values.service.type) }}
